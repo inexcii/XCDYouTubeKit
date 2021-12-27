@@ -4,3 +4,10 @@ RELEASE_NOTES.md
 *.xcuserstate
 xcuserdata/
 /release.sh
+
+### Xcode Patch ###
+**/xcshareddata/WorkspaceSettings.xcsettings
+*.xcodeproj/*
+135 !*.xcodeproj/project.pbxproj
+136 !*.xcodeproj/xcshareddata/
+137 !*.xcworkspace/contents.xcworkspacedata
