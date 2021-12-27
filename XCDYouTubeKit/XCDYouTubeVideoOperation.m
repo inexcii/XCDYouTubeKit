@@ -149,14 +149,14 @@ static NSError *YouTubeError(NSError *error, NSSet *regionsAllowed, NSString *la
 	{
 		[self.eventLabels removeObjectAtIndex:0];
 		
-		NSString *urlString = [NSString stringWithFormat:@"https://youtubei.googleapis.com/youtubei/v1/player?key=%@", XCDYouTubeClient.innertubeApiKey];
+		NSString *urlString = [NSString stringWithFormat:@"https://www.youtube.com/youtubei/v1/player?key=%@", XCDYouTubeClient.innertubeApiKey];
 		NSURL *url = [NSURL URLWithString:urlString];
 		
 		NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
 		
 		[request setHTTPMethod:@"POST"];
 		
-		NSString *string = [NSString stringWithFormat:@"{'context': {'client': {'hl': 'en','clientName': 'WEB','clientVersion': '2.20210721.00.00','mainAppWebInfo': {'graftUrl': '/watch?v=%@'}}},'videoId': '%@'}", self.videoIdentifier, self.videoIdentifier];
+		NSString *string = [NSString stringWithFormat:@"{'context': {'client': {'hl': 'en','clientName': 'IOS','clientVersion': '16.20','mainAppWebInfo': {'graftUrl': '/watch?v=%@'}}},'videoId': '%@'}", self.videoIdentifier, self.videoIdentifier];
 		
 		NSData *postData = [string dataUsingEncoding:NSASCIIStringEncoding];
 		
